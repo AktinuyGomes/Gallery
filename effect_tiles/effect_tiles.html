@@ -11,10 +11,44 @@
   <script src="palettes.js"></script>
 
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="../hud.css">
 </head>
 
 <body>
   <!-- Основной скрипт -->
-  <script src="tiles.js"></script>
+ <script src="tiles.js"></script>
+
+  <div id="settings-panel" class="hidden">
+    <h2>Настройки Эффекта Tiles</h2>
+    <div>
+      <label for="tile-size">Размер Плитки:</label>
+      <input type="range" id="tile-size" min="10" max="100" value="50">
+      <span id="tile-size-value">50</span>
+    </div>
+    <div>
+      <label for="spacing">Расстояние:</label>
+      <input type="range" id="spacing" min="0" max="20" value="5">
+      <span id="spacing-value">5</span>
+    </div>
+    <div>
+      <label for="enable-color-change">Менять цвет по клику:</label>
+      <input type="checkbox" id="enable-color-change">
+    </div>
+    <div>
+      <label for="enable-permanent-offset">Сохранять смещение:</label>
+      <input type="checkbox" id="enable-permanent-offset">
+    </div>
+    <div>
+      <label for="hover-effect-mode">Эффект наведения:</label>
+      <select id="hover-effect-mode">
+ <option value="fade">Fade</option>
+ <option value="highlight">Highlight</option>
+ <option value="rotate" selected>Rotate</option>
+      </select>
+    </div>
+    <!-- Добавим больше элементов управления по мере необходимости -->
+ </div>
+ <script src="../hud.js"></script>
 </body>
+</html>
 </html>
