@@ -1,13 +1,51 @@
-html, body {
-  width: 100%;
-  height: 100%;
-  margin: 0;
-  background: radial-gradient(circle at center, #111 0%, #000 100%);
-  font-family: 'Segoe UI', Tahoma, sans-serif;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #ffffff;
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #0a0a0a; /* Очень темный фон */
+    color: #e0e0e0; /* Светло-серый текст */
+    font-family: 'Roboto', sans-serif; /* Пример современного шрифта, можно выбрать другой */
+    line-height: 1.6;
+    overflow-x: hidden; /* Предотвращаем горизонтальный скролл */
+}
+
+.container {
+    max-width: 960px; /* Максимальная ширина контента */
+    margin: 40px auto; /* Центрируем и добавляем отступы сверху и снизу */
+    padding: 0 20px; /* Отступы по бокам */
+}
+
+h1 {
+    color: #00ffff; /* Неоновый голубой для заголовка */
+    text-align: center;
+    margin-bottom: 30px;
+    text-shadow: 0 0 8px #00ffff, 0 0 15px rgba(0, 255, 255, 0.5); /* Эффект свечения */
+    font-size: 2.5em;
+}
+
+.effect-list {
+    list-style: none; /* Убираем стандартные маркеры списка */
+    padding: 0;
+    margin: 0;
+}
+
+.effect-list li {
+    margin-bottom: 15px;
+    border: 1px solid #333; /* Темная рамка */
+    border-radius: 5px;
+    overflow: hidden; /* Для эффектов при наведении */
+    transition: border-color 0.3s ease; /* Плавное изменение цвета рамки */
+}
+
+.effect-list li:hover {
+    border-color: #00ffff; /* Свечение рамки при наведении */
+}
+
+.effect-list a {
+    display: block;
+    padding: 15px 20px;
+    text-decoration: none; /* Убираем подчеркивание ссылки */
+    color: #e0e0e0; /* Цвет текста ссылки */
+    transition: color 0.3s ease, background-color 0.3s ease; /* Плавное изменение цвета текста и фона */
 }
 
 .wrapper {
@@ -16,7 +54,7 @@ html, body {
   animation: rotateAngle 6s linear infinite;
   margin: auto;
   width: auto;
- }
+}
  
  button {
   display: block;
@@ -79,6 +117,11 @@ html, body {
  button:hover:after {
   --z: -0.06;
   animation: translateWobble 2.2s ease forwards;
+ }
+
+ .effect-list a:hover {
+ color: #00ffff; /* Цвет текста при наведении */
+    background-color: rgba(0, 255, 255, 0.1); /* Полупрозрачный фон при наведении */
  }
 
  @keyframes rotateAngle {
